@@ -1,0 +1,9 @@
+# B2 - Local Agent Skill System
+# Python依赖清单
+
+# 核心依赖（Python标准库为主，无需额外安装）
+# - ast, math, operator, csv, json, re, subprocess, tempfile, os, resource, signal
+# 以上均为Python标准库，无需pip安装
+
+# 可选依赖（如需增强功能）
+# 无第三方依赖，保持轻量
