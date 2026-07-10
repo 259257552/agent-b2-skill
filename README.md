@@ -19,35 +19,26 @@ B2模块是整个Agent系统的**工具执行层与安全底线**，向上为B3 
 ## 二、项目结构
 
 ```
-.
-├── README.md                          # 本文件
-├── requirements.txt                   # Python依赖
+agent-b2-skill/
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── B2_Final_Report_v2.md
+├── images/
+│   ├── B2_basic_skills.png
+│   ├── sandbox_block.png
+│   └── composite_skill.png
 ├── code/
-│   └── b2_run_skill.py               # 统一入口：错误码映射 + 复合Skill支持 + 性能计时
-├── skills/                           # Skill实现目录
-│   ├── __init__.py                   # 资源限制配置 + 路径解析 + 复合Skill导出
-│   ├── calculator.py                 # 数学表达式计算（AST安全求值）
-│   ├── file_reader.py                # 本地文件读取（txt/md，带大小限制）
-│   ├── local_file_search.py          # 本地文件检索（TF-IDF加权）
-│   ├── table_analyzer.py             # CSV/TSV表格分析（带行数限制）
-│   ├── format_converter.py           # 文本格式转换（markdown/json，带输出限制）
-│   ├── composite_skills.py           # 复合Skill编排（read_and_convert, analyze_and_convert）
-│   └── code_executor.py              # 沙箱代码执行（五层安全防护）
-├── data/                             # 测试数据（运行时生成或手动放置）
-│   ├── docs/                         # 文档文件（txt/md）
-│   ├── tables/                       # 表格文件（csv/tsv）
-│   └── tool_inputs/                  # 工具输入JSON
-├── outputs/                          # 测试结果输出目录
-│   └── B2_skills/                    # Skill执行结果JSON
-├── tests/                            # 测试脚本
-│   ├── test_basic_skills.py          # 5个基础Skill测试
-│   ├── test_composite_skills.py      # 复合Skill测试
-│   ├── test_sandbox.py               # 沙箱安全测试
-│   └── test_resource_limits.py       # 资源限制测试
-└── docs/                             # 文档
-    ├── architecture.md               # 架构设计文档
-    ├── error_codes.md                # 错误码规范
-    └── api_reference.md              # API接口文档
+│   └── b2_run_skill.py
+└── skills/
+    ├── __init__.py
+    ├── calculator.py
+    ├── file_reader.py
+    ├── local_file_search.py
+    ├── table_analyzer.py
+    ├── format_converter.py
+    ├── composite_skills.py
+    └── code_executor.py
 ```
 
 ---
